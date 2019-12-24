@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Frender | Знакомства</string>
+    <string name="title_home">Главная</string>
+    <string name="title_dashboard">Девушки</string>
+    <string name="title_notifications">Информация</string>
+
+    <string name="title_activity_fullscreen">FullscreenActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+
+    <string name="start">Начать</string>
+    <string name="home_caption">Возможности приложения:</string>
+    <string name="like">Здесь будет инфа о возможностях</string>
+    <string name="unlike">Вам не понравились: 0 девушек</string>
+    <string name="none">Вы не оценили ни одной девушки</string>
+
+    <string name="info1">Frender - это приложение, в котором вы можете познакомиться
+        с девушками разных социальных статусов
+    Удачи в знакомствах!
+    </string>
+    <string name="promo1">Начинай новые знакомства онлайн, \n находи людей рядом!</string>
+</resources>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".StartActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/main_background"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/main_background" />
+
+        <ImageView
+            android:id="@+id/main_logo"
+            android:layout_width="364dp"
+            android:layout_height="147dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="200dp"
+            android:layout_marginEnd="50dp"
+            android:layout_marginBottom="200dp"
+            android:src="@drawable/tinder_logo" />
+
+        <LinearLayout
+            android:id="@+id/startLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="30dp"
+            android:padding="10dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/buttonStart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_stroke_white_press"
+                android:layout_weight="1"
+                android:text="@string/start"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:textColor="@color/white"
+                android:textAllCaps="false"
+                android:textSize="35dp"/>
+        </LinearLayout>
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

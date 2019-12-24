@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="?attr/actionBarSize">
+
+    <RelativeLayout
+        android:id="@+id/glav_id"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible"
+        tools:layout_editor_absoluteY="112dp">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/container2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/imageLogo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:layout_marginStart="70dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginEnd="70dp"
+                        android:scaleType="fitStart"
+                        android:src="@drawable/logo_tinder_onwhite"
+                        android:visibility="visible" />
+
+                    <LinearLayout
+                        android:id="@+id/container4"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="0dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/textLike"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="TextView" />
+
+                        <TextView
+                            android:id="@+id/textDislike"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="TextView" />
+
+                        <TextView
+                            android:id="@+id/textNone"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="TextView" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/textInfo2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/start"
+                        android:textColor="@color/black"
+                        android:textSize="20dp" />
+
+                    <ImageView
+                        android:id="@+id/imageBase2"
+                        android:layout_width="match_parent"
+                        android:layout_height="300dp"
+                        android:layout_marginTop="10dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/f1" />
+
+                    <LinearLayout
+                        android:id="@+id/container3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="60dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="20dp"
+                        android:orientation="horizontal">
+
+                        <ImageButton
+                            android:id="@+id/imageUnLike2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="100dp"
+                            android:layout_marginStart="60dp"
+                            android:layout_marginEnd="30dp"
+                            android:layout_weight="1"
+                            android:background="@color/ghost"
+                            android:onClick="OnUnLikeClick"
+                            android:scaleType="fitStart"
+                            android:src="@drawable/unlike" />
+
+                        <ImageButton
+                            android:id="@+id/imageLike2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="100dp"
+                            android:layout_marginStart="30dp"
+                            android:layout_marginEnd="60dp"
+                            android:layout_weight="1"
+                            android:background="@color/ghost"
+                            android:onClick="OnLikeClick"
+                            android:scaleType="fitStart"
+                            android:src="@drawable/like" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+
+    </RelativeLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="0dp"
+        android:layout_marginEnd="0dp"
+        android:background="?android:attr/windowBackground"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:menu="@menu/bottom_nav_menu" />
+
+    <fragment
+        android:id="@+id/nav_host_fragment"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="invisible"
+        app:defaultNavHost="true"
+        app:layout_constraintBottom_toTopOf="@id/nav_view"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navGraph="@navigation/mobile_navigation" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
